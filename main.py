@@ -4,7 +4,7 @@ import math
 
 N = 8
 M = 8
-MIC_PIN = pin1 #microphone.sound_level()
+MIC_PIN = pin1 #microphone
 
 buf = [0]*N
 spect = [[0j]*N for i in range(M)]
