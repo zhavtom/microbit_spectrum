@@ -4,7 +4,6 @@ import math
 
 N = 8
 M = 8
-MIC_IN = pin1.read_analog() #microphone.sound_level()
 
 buf = [0]*N
 spect = [[0j]*N for i in range(M)]
@@ -61,7 +60,7 @@ def level_bar(x):
 
 while True:
     sleep(0.1)
-    buf[0:0] = [MIC_IN]
+    buf[0:0] = [microphone.sound_level()] #[pin1.read_analog()]
     buf.pop(-1)
 
     spect[0:0] = [FFT(buf)]
